@@ -5,6 +5,7 @@ import java.sql.Struct;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
+import static ReportConstant.NEWLINE;
 
 
 public class RosterReporterTest extends TestCase {

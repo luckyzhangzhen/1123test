@@ -14,7 +14,7 @@ public class CourseSessionTest extends TestCase {
     private Date startDate;
     public void setUp(){
         startDate=createDate(2003,1,6);
-        startDate=new DateUtil().CreateDate(2003,1,6);
+        startDate=DateUtil.CreateDate(2003,1,6);
         session=new CourseSession("English",
                 "101",startDate);
 
@@ -61,7 +61,7 @@ public class CourseSessionTest extends TestCase {
          Date sixteenWeeksOut=new Date(year,month,date);
          assertEquals(sixteenWeeksOut,session.getEndDate());
 
-         Date sixteenWeeksOut2=new DateUtil().CreateDate(2003,4,25);
+         Date sixteenWeeksOut2=DateUtil.CreateDate(2003,4,25);
         assertEquals(sixteenWeeksOut,session.getEndDate());
     }
     @Test

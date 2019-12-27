@@ -8,7 +8,7 @@ import java.util.GregorianCalendar;
 public class DateUtilTest extends TestCase {
     @Test
     public void testCreateDate(){
-        Date date=new DateUtil().CreateDate(2000,1,1);
+        Date date=DateUtil.CreateDate(2000,1,1);
         Calendar calendar=new GregorianCalendar();
         calendar.setTime(date);
         assertEquals(2000,calendar.get(Calendar.YEAR));

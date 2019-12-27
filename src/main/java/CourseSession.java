@@ -5,6 +5,7 @@ public class CourseSession {
     private String department;
     private String number;
 //    private int numberOfStudents=0;
+    static int count;
     private ArrayList<Student> students=new ArrayList<Student>();
     private Date startDate;
     public static final String NEWLINE=System.getProperty("line.separator");
@@ -14,7 +15,15 @@ public class CourseSession {
         this.department=department;
         this.number=number;
         this.startDate=startDate;
+        CourseSession.count=CourseSession.count+1;
+        CourseSession.incrementCount();
 
+    }
+    /*
+    计数类方法
+     */
+    private static void incrementCount(){
+        count=count++;
     }
     public String getDepartment(){
         return department;
@@ -67,8 +76,10 @@ public class CourseSession {
 //            students[i]
 //        }
 
+
         buffer.append(ROSTER_REPORT_FOOTER+students.size()+NEWLINE);
         return buffer.toString();
+
     }
 
 }

@@ -3,7 +3,8 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 
 public class DateUtil {
-    Date CreateDate(int year,int month,int date){
+    private DateUtil(){}
+    public static Date CreateDate(int year,int month,int date){
         GregorianCalendar calendar=new GregorianCalendar();
         calendar.clear();
         calendar.set(Calendar.YEAR,year);
